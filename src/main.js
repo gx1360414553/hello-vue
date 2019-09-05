@@ -6,6 +6,9 @@ import router from "./router"
 
 import App from './App'
 
+import axios from 'axios'
+Vue.prototype.axios = axios;
+
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 

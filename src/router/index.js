@@ -5,11 +5,13 @@ import Login from '../views/Login'
 
 import UserProfile from '../views/user/UserProfile'
 import UserList from '../views/user/UserList'
+import NotFound from '../views/error/NotFound'
 
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: "/main/:username",
@@ -24,6 +26,14 @@ export default new Router({
       path: "/Login",
       name: "Login",
       component: Login
+    },
+    {
+      path: '/goMain/:username',
+      redirect: '/main/:username'
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 });
