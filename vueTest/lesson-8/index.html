@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <my-componet-li v-for="item in items" v-bind:item = "item"></my-componet-li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component("my-componet-li",{
+            props: ["item"],
+            template: "<li>{{item}}</li>"
+        })
+
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                items: ["张三", "李四", "王五"]
+            }
+        });
+    </script>
+
+</body>
+</html>
