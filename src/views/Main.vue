@@ -14,9 +14,9 @@
                 <el-menu-item index="1-2">
                   <router-link to="/user/list">用户列表</router-link>
                 </el-menu-item>
-                <el-menu-item index="1-3">
-                  <router-link to="/goMain/lisi">回到首页</router-link>
-                </el-menu-item>
+<!--                <el-menu-item index="1-3">-->
+<!--                  <router-link to="/goMain/lisi">回到首页</router-link>-->
+<!--                </el-menu-item>-->
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="2">
@@ -38,7 +38,8 @@
                 <el-dropdown-item>退出登入</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
-            <span>{{$route.params.username}}</span>
+<!--            <span>{{$route.params.username}}</span>-->
+            <span>{{$store.getters.getUser.username}}</span>
           </el-header>
 
           <el-main>

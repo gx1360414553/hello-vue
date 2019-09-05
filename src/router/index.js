@@ -14,7 +14,8 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: "/main/:username",
+      // path: "/main/:username",
+      path: "/main",
       name: "Main",
       component: Main,
       children:[

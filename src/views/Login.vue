@@ -38,6 +38,9 @@
         onSubmit (formName){
           this.$refs[formName].validate((valid) => {
             if (valid) {
+              sessionStorage.setItem("isLogin","true");
+              this.$store.dispatch("asyncUpdateUser",{username: this.form.username});
+
               this.$router.push({name: 'Main', params: {username: this.form.username}});
             } else {
               this.$message({
